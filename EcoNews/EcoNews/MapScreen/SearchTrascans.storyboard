@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="utk-Gg-KXO">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Поиск мусорок по адресу-->
+        <scene sceneID="JxP-2E-Kyi">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A0M-nt-KXE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tableViewController id="7pc-4U-z44" customClass="SearchTrashcanViewController" customModule="EcoHelper" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="kPQ-Xy-WkF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="8uo-kc-COW" detailTextLabel="5ay-L1-Jgo" style="IBUITableViewCellStyleSubtitle" id="bI3-6c-RjZ">
+                                <rect key="frame" x="0.0" y="24.5" width="414" height="55.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bI3-6c-RjZ" id="hNt-1a-kVr">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="55.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8uo-kc-COW">
+                                            <rect key="frame" x="20" y="10" width="33" height="20.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5ay-L1-Jgo">
+                                            <rect key="frame" x="20" y="31.5" width="44" height="14.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="vCW-Ao-fNE" kind="show" identifier="showDetail" id="UNh-cj-oJK"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="7pc-4U-z44" id="Imx-5W-gdN"/>
+                            <outlet property="delegate" destination="7pc-4U-z44" id="Lga-Nm-SND"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Поиск мусорок по адресу" largeTitleDisplayMode="never" id="ago-ad-SOe"/>
+                </tableViewController>
+            </objects>
+            <point key="canvasLocation" x="350" y="128"/>
+        </scene>
+        <!--Detail Search View Controller-->
+        <scene sceneID="I1s-wz-BeD">
+            <objects>
+                <exit id="xSi-or-1Vj" userLabel="Exit" sceneMemberID="exit"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vsT-NK-lc3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="vCW-Ao-fNE" customClass="DetailSearchViewController" customModule="EcoHelper" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DVU-Y0-3WG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="XYO-oH-vXj">
+                                <rect key="frame" x="22" y="140" width="370" height="70"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="E8S-f6-LBt">
+                                        <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="1Y6-de-Wwz"/>
+                                            <constraint firstAttribute="width" constant="70" id="dp1-Fn-ZEc"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aKO-1G-MPh">
+                                        <rect key="frame" x="100" y="0.0" width="70" height="70"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="70" id="9m7-ks-JOH"/>
+                                            <constraint firstAttribute="height" constant="70" id="Juc-Cw-ult"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tYp-rK-Kbc">
+                                        <rect key="frame" x="200" y="0.0" width="70" height="70"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="JFw-kM-SxV"/>
+                                            <constraint firstAttribute="width" constant="70" id="TtJ-el-cap"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mKf-1S-B1Z">
+                                        <rect key="frame" x="300" y="0.0" width="70" height="70"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="70" id="9g4-4I-cDs"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Адрес: " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="THG-Lm-F8G">
+                                <rect key="frame" x="22" y="240" width="370" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YbL-3j-6cI" customClass="CustomButtonFavourite" customModule="EcoHelper" customModuleProvider="target">
+                                <rect key="frame" x="168" y="320" width="78" height="36"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Найти">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="xSi-or-1Vj" kind="unwind" unwindAction="didUnwindFromDetailVC:" id="FPB-NZ-yKw"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="c7u-aa-jMM"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="c7u-aa-jMM" firstAttribute="trailing" secondItem="THG-Lm-F8G" secondAttribute="trailing" constant="22" id="BSx-7z-Lc6"/>
+                            <constraint firstItem="XYO-oH-vXj" firstAttribute="leading" secondItem="c7u-aa-jMM" secondAttribute="leading" constant="22" id="ItR-Pp-CJs"/>
+                            <constraint firstItem="c7u-aa-jMM" firstAttribute="trailing" secondItem="YbL-3j-6cI" secondAttribute="trailing" constant="168" id="SsR-Kt-w2g"/>
+                            <constraint firstItem="THG-Lm-F8G" firstAttribute="leading" secondItem="c7u-aa-jMM" secondAttribute="leading" constant="22" id="bsi-KW-IuT"/>
+                            <constraint firstItem="YbL-3j-6cI" firstAttribute="top" secondItem="XYO-oH-vXj" secondAttribute="bottom" constant="110" id="dOB-CJ-WyN"/>
+                            <constraint firstItem="c7u-aa-jMM" firstAttribute="trailing" secondItem="XYO-oH-vXj" secondAttribute="trailing" constant="22" id="iH4-oH-AUH"/>
+                            <constraint firstItem="XYO-oH-vXj" firstAttribute="top" secondItem="c7u-aa-jMM" secondAttribute="top" id="mZs-fS-Xiy"/>
+                            <constraint firstItem="THG-Lm-F8G" firstAttribute="top" secondItem="XYO-oH-vXj" secondAttribute="bottom" constant="30" id="qrG-DR-efc"/>
+                            <constraint firstItem="YbL-3j-6cI" firstAttribute="leading" secondItem="c7u-aa-jMM" secondAttribute="leading" constant="168" id="vKf-H0-xuQ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="x9P-FP-3zo"/>
+                    <connections>
+                        <outlet property="btnSearch" destination="YbL-3j-6cI" id="fPt-9q-cgl"/>
+                        <outlet property="imgGlass" destination="E8S-f6-LBt" id="kvB-LA-4DB"/>
+                        <outlet property="imgMetal" destination="mKf-1S-B1Z" id="ms8-oi-JxW"/>
+                        <outlet property="imgPaper" destination="aKO-1G-MPh" id="KHy-Fy-nv3"/>
+                        <outlet property="imgPlastic" destination="tYp-rK-Kbc" id="eah-2f-kiy"/>
+                        <outlet property="labelAddress" destination="THG-Lm-F8G" id="KjB-Za-Ekq"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1079.7101449275362" y="127.90178571428571"/>
+        </scene>
+        <!--Search-->
+        <scene sceneID="0ER-mF-Obb">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Osh-ro-gCQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController id="utk-Gg-KXO" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Search" image="searchTrashcans" id="EQP-An-1Lm"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="Ins-nq-LAQ">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="7pc-4U-z44" kind="relationship" relationship="rootViewController" id="o23-c3-dbm"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="-390" y="129"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="searchTrashcans" width="22" height="22"/>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

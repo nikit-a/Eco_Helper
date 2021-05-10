@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0Db-Zb-lmx">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Filter-->
+        <scene sceneID="RNg-lr-psg">
+            <objects>
+                <viewController storyboardIdentifier="filter_ID" useStoryboardIdentifierAsRestorationIdentifier="YES" id="0Db-Zb-lmx" customClass="FilterTrashcanViewController" customModule="EcoHelper" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CYa-K5-NXS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="37" translatesAutoresizingMaskIntoConstraints="NO" id="ECu-Iu-MuO">
+                                <rect key="frame" x="20" y="44" width="374" height="100"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iHz-nr-3gU">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="qQ1-Tt-Pgv"/>
+                                        </constraints>
+                                        <state key="normal" image="wbGlass"/>
+                                        <connections>
+                                            <action selector="clickGlassBtn:" destination="0Db-Zb-lmx" eventType="touchUpInside" id="QGg-tr-JlJ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K1z-7f-OYb">
+                                        <rect key="frame" x="137" y="0.0" width="100" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="60l-W9-hqv"/>
+                                        </constraints>
+                                        <state key="normal" image="wbMetall"/>
+                                        <connections>
+                                            <action selector="clickMetalBtn:" destination="0Db-Zb-lmx" eventType="touchUpInside" id="hik-6h-oH2"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JC0-cP-G4d">
+                                        <rect key="frame" x="274" y="0.0" width="100" height="100"/>
+                                        <state key="normal" image="wbPaper"/>
+                                        <connections>
+                                            <action selector="clickPaperBtn:" destination="0Db-Zb-lmx" eventType="touchUpInside" id="jCe-fj-3f9"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Xjl-2V-aBX"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="174" translatesAutoresizingMaskIntoConstraints="NO" id="0NQ-A1-WNv">
+                                <rect key="frame" x="20" y="169" width="374" height="100"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gga-b2-6jB">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="Dai-Rm-XqB"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="wbPlastic"/>
+                                        <connections>
+                                            <action selector="clickPlasticBtn:" destination="0Db-Zb-lmx" eventType="touchUpInside" id="nU6-by-S0E"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r3v-hJ-W1s">
+                                        <rect key="frame" x="274" y="0.0" width="100" height="100"/>
+                                        <state key="normal" image="wbFavorite"/>
+                                        <connections>
+                                            <action selector="clickFavoriteBtn:" destination="0Db-Zb-lmx" eventType="touchUpInside" id="li7-4d-R6Y"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="NfV-Sg-7UC"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ybr-UK-lW1" customClass="CustomButtonFavourite" customModule="EcoHelper" customModuleProvider="target">
+                                <rect key="frame" x="164" y="469" width="87" height="36"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Найти">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="jzN-IM-91G" kind="unwind" unwindAction="didUnwindFromFilterVC:" id="BZU-YY-u8n"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="GXW-3n-VtN"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="GXW-3n-VtN" firstAttribute="trailing" secondItem="ECu-Iu-MuO" secondAttribute="trailing" constant="20" id="4k2-VK-GNf"/>
+                            <constraint firstItem="GXW-3n-VtN" firstAttribute="trailing" secondItem="0NQ-A1-WNv" secondAttribute="trailing" constant="20" id="M0d-oA-aIu"/>
+                            <constraint firstItem="0NQ-A1-WNv" firstAttribute="top" secondItem="ECu-Iu-MuO" secondAttribute="bottom" constant="25" id="QH9-W6-HEL"/>
+                            <constraint firstItem="ECu-Iu-MuO" firstAttribute="leading" secondItem="GXW-3n-VtN" secondAttribute="leading" constant="20" id="TQ3-VU-1Ax"/>
+                            <constraint firstItem="Ybr-UK-lW1" firstAttribute="leading" secondItem="GXW-3n-VtN" secondAttribute="leading" constant="164" id="Xhx-6H-rz5"/>
+                            <constraint firstItem="Ybr-UK-lW1" firstAttribute="top" secondItem="0NQ-A1-WNv" secondAttribute="bottom" constant="200" id="eDO-T9-QGe"/>
+                            <constraint firstItem="0NQ-A1-WNv" firstAttribute="leading" secondItem="GXW-3n-VtN" secondAttribute="leading" constant="20" id="meA-fQ-96P"/>
+                            <constraint firstItem="GXW-3n-VtN" firstAttribute="trailing" secondItem="Ybr-UK-lW1" secondAttribute="trailing" constant="163" id="r6i-Gk-RsY"/>
+                            <constraint firstItem="ECu-Iu-MuO" firstAttribute="top" secondItem="GXW-3n-VtN" secondAttribute="top" id="yuW-IH-ctN"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Filter" image="filterTrashcans" id="68B-zd-oxQ"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="btnFavorite" destination="r3v-hJ-W1s" id="sNk-yo-pKf"/>
+                        <outlet property="btnGlass" destination="iHz-nr-3gU" id="NnY-Sp-s1u"/>
+                        <outlet property="btnMetal" destination="K1z-7f-OYb" id="5qo-Ss-hZN"/>
+                        <outlet property="btnPaper" destination="JC0-cP-G4d" id="F9j-KR-7og"/>
+                        <outlet property="btnPlastic" destination="gga-b2-6jB" id="ONJ-mB-1Xs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="avm-3B-laX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="jzN-IM-91G" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="969.56521739130437" y="1101.5625"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="filterTrashcans" width="22" height="22"/>
+        <image name="wbFavorite" width="512" height="512"/>
+        <image name="wbGlass" width="512" height="512"/>
+        <image name="wbMetall" width="512" height="512"/>
+        <image name="wbPaper" width="512" height="512"/>
+        <image name="wbPlastic" width="512" height="512"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
